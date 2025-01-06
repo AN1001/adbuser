@@ -1,4 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", serif;
+}
+
 :root{
-  background:rgb(35,35,35);
+  --main-bg: #121212;
+  --overlay: #1e1e1e;
+  --accent: #3768f8;
+  --border: #424242;
+  --text: #fff;
+  --faint-text: #c5c5c5;
+}
+
+html{
+  background: var(--main-bg);
+}
+
+#sidebar{
+  background: var(--overlay);
+  width: 350px;
+  height:300px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0 0 0;
+}
+
+.sidebar-el{
+  width: 315px;
+  background: var(--main-bg);
+  margin: 10px 0 10px 0;
+  border-radius: 0.5em;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0 15px 15px;
+}
+
+.sidebar-sub-main{
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-sub-el{
+  display: flex;
+  align-items: center;
   color: white;
+}
+
+.sidebar-el-name{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-around;
+  margin: 0 0 0 15px;
+}
+
+.dash{
+  width: 100%;
+  height: 25px;
+  border-left: 2px solid #575757;
+  margin-left: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mini-title{
+  color: var(--faint-text);
+  font-size: 0.9em;
+}
+
+.main-title{
+  color: var(--text);
+  font-size: 1.1em;
 }
