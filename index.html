@@ -8,71 +8,35 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="sidebar">
-      <div class="sidebar-el">
-        <section class="sidebar-sub-main">
-          <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
-            <circle r="15" cx="15" cy="15" fill="#2e2e2e" />
-            <circle r="10" cx="15" cy="15" fill="#121212" />
-          </svg>
-          <div class="sidebar-el-name">
-            <span class="mini-title">Section 1</span>
-            <strong class="main-title">Long Title For Element</strong>
-          </div>
-        </section>
+    <section id="sidebar"></section>
+    <script src="index.js" defer></script>
 
-        <section class="dash"></section>
-
-        <section class="sidebar-sub-el">
-          <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
-            <circle r="15" cx="15" cy="15" fill="none" />
-            <circle r="10" cx="15" cy="15" fill="#2e2e2e" />
-          </svg>
-          <div class="sidebar-el-name">
-            <span class="main-title">Long Title For Element</span>
-          </div>
-        </section>
-
-        <section class="dash"></section>
-
-        <section class="sidebar-sub-el">
-          <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
-            <circle r="15" cx="15" cy="15" fill="none" />
-            <circle r="10" cx="15" cy="15" fill="#2e2e2e" />
-          </svg>
-          <div class="sidebar-el-name">
-            <span class="main-title">Long Title For Element</span>
-          </div>
-        </section>
-      </div>
-
-      <div class="sidebar-el"></div>
-    </section>
-    <script src="index.js"></script>
-  </body>
-
-  <template id="sidebar_sub_main">
-    <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
-      <circle r="15" cx="15" cy="15" fill="#2e2e2e" />
-      <circle r="10" cx="15" cy="15" fill="#121212" />
-    </svg>
-    <div class="sidebar-el-name">
-      <span class="mini-title">Section 1</span>
-      <strong class="main-title">Long Title For Element</strong>
-    </div>
-  </template>
-
-  <template id="sidebar_sub_el">
-    <section class="dash"></section>
-    <section class="sidebar-sub-el">
+    <template id="sidebar_sub_main">
+      <section class="sidebar-sub-main">
       <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
-        <circle r="15" cx="15" cy="15" fill="none" />
-        <circle r="10" cx="15" cy="15" fill="#2e2e2e" />
+        <circle r="15" cx="15" cy="15" fill="#2e2e2e" />
+        <circle r="10" cx="15" cy="15" fill="#121212" />
       </svg>
       <div class="sidebar-el-name">
-        <span class="main-title">Long Title For Element</span>
+        <span class="mini-title">Section 1</span>
+        <strong class="main-title">Long Title For Element</strong>
       </div>
     </section>
-  </template>
+    </template>
+  
+    <template id="sidebar_sub_el">
+      <section class="dash"></section>
+      <section class="sidebar-sub-el">
+        <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+          <circle r="15" cx="15" cy="15" fill="none" />
+          <circle r="10" cx="15" cy="15" fill="#2e2e2e" />
+        </svg>
+        <div class="sidebar-el-name">
+          <span class="main-title">Long Title For Element</span>
+        </div>
+      </section>
+    </template>
+  </body>
+
 </html>
 
