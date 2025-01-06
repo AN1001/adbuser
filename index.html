@@ -1,15 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User Side JS</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Documentation</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-	<div>This is the api for fetching the user side script for ADB.</div>
-	<p>This is not the human side website</p>
-	<script src="user.js"></script>
+    <section id="sidebar">
+      <div class="sidebar-el">
+        <section class="sidebar-sub-main">
+          <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+            <circle r="15" cx="15" cy="15" fill="#2e2e2e" />
+            <circle r="10" cx="15" cy="15" fill="#121212" />
+          </svg>
+          <div class="sidebar-el-name">
+            <span class="mini-title">Section 1</span>
+            <strong class="main-title">Long Title For Element</strong>
+          </div>
+        </section>
+
+        <section class="dash"></section>
+
+        <section class="sidebar-sub-el">
+          <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+            <circle r="15" cx="15" cy="15" fill="none" />
+            <circle r="10" cx="15" cy="15" fill="#2e2e2e" />
+          </svg>
+          <div class="sidebar-el-name">
+            <span class="main-title">Long Title For Element</span>
+          </div>
+        </section>
+
+        <section class="dash"></section>
+
+        <section class="sidebar-sub-el">
+          <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+            <circle r="15" cx="15" cy="15" fill="none" />
+            <circle r="10" cx="15" cy="15" fill="#2e2e2e" />
+          </svg>
+          <div class="sidebar-el-name">
+            <span class="main-title">Long Title For Element</span>
+          </div>
+        </section>
+      </div>
+
+      <div class="sidebar-el"></div>
+    </section>
+    <script src="index.js"></script>
   </body>
+
+  <template id="sidebar_sub_main">
+    <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+      <circle r="15" cx="15" cy="15" fill="#2e2e2e" />
+      <circle r="10" cx="15" cy="15" fill="#121212" />
+    </svg>
+    <div class="sidebar-el-name">
+      <span class="mini-title">Section 1</span>
+      <strong class="main-title">Long Title For Element</strong>
+    </div>
+  </template>
+
+  <template id="sidebar_sub_el">
+    <section class="dash"></section>
+    <section class="sidebar-sub-el">
+      <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+        <circle r="15" cx="15" cy="15" fill="none" />
+        <circle r="10" cx="15" cy="15" fill="#2e2e2e" />
+      </svg>
+      <div class="sidebar-el-name">
+        <span class="main-title">Long Title For Element</span>
+      </div>
+    </section>
+  </template>
 </html>
+
