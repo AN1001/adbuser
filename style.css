@@ -67,10 +67,10 @@ html{
 }
 
 .sidebar-sub-el:hover{
-  color: #a4bcfd61;
+  color: var(--border);
 }
 
-#active{
+.active{
   color: #a4bbfd;
 }
 
