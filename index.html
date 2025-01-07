@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="sidebar"></section>
+    <div id="sidebar-holder">
+      <section id="sidebar"></section>
+    </div>
+
     <script src="index.js" defer></script>
 
     <template id="sidebar_sub_main">
@@ -29,7 +32,7 @@
       <section class="sidebar-sub-el">
         <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
           <circle r="15" cx="15" cy="15" fill="none" />
-          <circle r="10" cx="15" cy="15" fill="#2e2e2e" />
+          <circle r="10" cx="15" cy="15" fill="currentcolor" />
         </svg>
         <div class="sidebar-el-name">
           <span class="main-title">Long Title For Element</span>

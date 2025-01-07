@@ -1,12 +1,16 @@
 contents = {
     header:"Setup Code",
-    subsections:["Extra Dependancies", "Quick Setups", "Examples"]
+    subsections:["Dependancies", "Quick Setups", "Examples"]
 }
 
 sidebar = document.getElementById("sidebar");
 sidebar_el_title = document.getElementById("sidebar_sub_main");
 sidebar_el_sub = document.getElementById("sidebar_sub_el");
 
+create_sidebar_el(contents);
+create_sidebar_el(contents);
+create_sidebar_el(contents);
+create_sidebar_el(contents);
 create_sidebar_el(contents);
 
 
