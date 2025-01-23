@@ -2,6 +2,12 @@ const sidebar = document.getElementById("sidebar");
 const sidebar_el_title = document.getElementById("sidebar_sub_main");
 const sidebar_el_sub = document.getElementById("sidebar_sub_el");
 
+sidebar.addEventListener("click", function(e){
+    if(e.target.id.includes("-")){
+        set_active(e.target.id);
+    }
+})
+
 function create_sidebar_el(el_data, index){
     let sidebarEl = document.createElement('div');
     sidebarEl.className = 'sidebar-el';
@@ -27,6 +33,12 @@ function render(sections){
     });
 }
 
+function set_active(new_tab){
+    document.getElementById(current_active_tab).classList.remove("active");
+    current_active_tab = new_tab;
+    document.getElementById(new_tab).classList.add("active");
+}
+
 const setup_section = {
     header:"Setup Code",
     subsections:["Dependancies", "Quick Setups", "Examples"]
@@ -38,5 +50,7 @@ const demo_section = {
 }
 
 let contents = [setup_section, demo_section];
+var current_active_tab = "1-1"
 
 render(contents);
+set_active(current_active_tab);

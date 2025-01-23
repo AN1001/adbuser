@@ -70,8 +70,8 @@ html{
   color: var(--border);
 }
 
-.active{
-  color: #a4bbfd;
+.active {
+  color: #a4bbfd !important;
 }
 
 .sidebar-el-name{
