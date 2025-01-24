@@ -1,3 +1,5 @@
+import compile from "./sfl_compiler.js"
+
 const sidebar = document.getElementById("sidebar");
 const sidebar_el_title = document.getElementById("sidebar_sub_main");
 const sidebar_el_sub = document.getElementById("sidebar_sub_el");
@@ -61,3 +63,4 @@ document.querySelectorAll('span').forEach(span => {
     });
 });
 
+compile("dependancies.sfl")
