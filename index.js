@@ -50,7 +50,7 @@ const demo_section = {
 }
 
 let contents = [setup_section, demo_section];
-var current_active_tab = "1-1"
+var current_active_tab = "0-0"
 
 render(contents);
 set_active(current_active_tab);

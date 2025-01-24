@@ -1,0 +1,3 @@
+<title>Dependancies
+<text>ArnavDB does not use any Dependancies, however it will require
+you to install the user side script for ease of access
