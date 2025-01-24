@@ -54,3 +54,10 @@ var current_active_tab = "1-1"
 
 render(contents);
 set_active(current_active_tab);
+
+document.querySelectorAll('span').forEach(span => {
+    span.addEventListener('click', function() {
+        this.parentElement.parentElement.click();
+    });
+});
+
