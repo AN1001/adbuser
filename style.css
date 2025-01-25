@@ -20,6 +20,15 @@ html{
   background: var(--main-bg);
 }
 
+body{
+  display: flex;
+  flex-direction: row;
+}
+
+#main-area{
+  width: calc(100vw - 250px);
+}
+
 #sidebar-holder{
   height: 100vh;
   overflow-y: hidden;
@@ -99,4 +108,8 @@ html{
 .main-title{
   color: var(--text);
   font-size: 1.1em;
+}
+
+.genCode {
+  white-space: pre-wrap;
 }

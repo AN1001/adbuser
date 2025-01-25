@@ -1,8 +1,10 @@
 import compile from "./sfl_compiler.js"
+import generateHTML from "./sfl_generator.js"
 
 const sidebar = document.getElementById("sidebar");
 const sidebar_el_title = document.getElementById("sidebar_sub_main");
 const sidebar_el_sub = document.getElementById("sidebar_sub_el");
+const main_area = document.getElementById("main-area");
 
 sidebar.addEventListener("click", function(e){
     if(e.target.id.includes("-")){
@@ -63,4 +65,10 @@ document.querySelectorAll('span').forEach(span => {
     });
 });
 
-compile("dependancies.sfl")
+async function render_html(){
+    const data = await compile("dependancies.sfl");
+    generateHTML(data, main_area);
+    console.log(data);
+}
+render_html()
+

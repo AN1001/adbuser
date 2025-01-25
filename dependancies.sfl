@@ -1,7 +1,14 @@
 <title>Dependancies
 <text>ArnavDB does not use any Dependancies, however it will require 
 you to install the user side script for ease of access. Additionally you will need to 
-download the Wrangler API for local access of the database.
+download the [Wrangler API][bold,italics] for local access of the database.
 
 If you don't want to install any dependancies you can just use the online interface.
+
 <code>npx -install Wrangler
+
+npx -compile
+
+Wrangler DB 
+
+<text>Thank you for reading
