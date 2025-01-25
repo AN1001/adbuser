@@ -31,6 +31,9 @@ body{
   width: calc(100vw - 250px - 2 * var(--main-area-padding));
   padding: var(--main-area-padding);
   padding-top: 40px;
+
+  height: calc(100vh - 90px);
+  overflow-y: scroll;
 }
 
 #main-area * {
@@ -124,7 +127,8 @@ body{
 
 .code {
   font-family: monospace;
-  background: var(--border);
+  font-size: 14px;
+  background: #252525;
   padding: 3px 5px 3px 5px;
   border-radius: 0.3em;
   margin: 0 4px 0 4px;
