@@ -33,6 +33,14 @@ body{
   padding-top: 40px;
 }
 
+#main-area * {
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.3s;
+}
+
 #sidebar-holder{
   height: 100vh;
   overflow-y: hidden;
@@ -120,4 +128,13 @@ body{
   padding: 3px 5px 3px 5px;
   border-radius: 0.3em;
   margin: 0 4px 0 4px;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
