@@ -57,18 +57,13 @@ document.querySelectorAll('span').forEach(span => {
 });
 
 async function render_html(fname){
-    try{
-        const data = await compile(fname);
+        let data = await compile(fname);
         console.log(data)
+        if(data[0][0]=="!DOCTYPE html"){
+            data = await compile("ERROR.sfl");
+        }
         generateHTML(data, main_area);
     }
-    catch(e){
-        console.log(e);
-        const data = await compile("ERROR.sfl");
-        generateHTML(data, main_area);
-    }
-
-}
 
 function updateHTML(current_active_tab){
     let section_number = parseInt(current_active_tab.split("-")[0]);
