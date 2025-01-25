@@ -1,5 +1,6 @@
 import compile from "./sfl_compiler.js"
 import generateHTML from "./sfl_generator.js"
+import contents from "./sections.js";
 
 const sidebar = document.getElementById("sidebar");
 const sidebar_el_title = document.getElementById("sidebar_sub_main");
@@ -40,20 +41,10 @@ function render(sections){
 function set_active(new_tab){
     document.getElementById(current_active_tab).classList.remove("active");
     current_active_tab = new_tab;
+    updateHTML(current_active_tab);
     document.getElementById(new_tab).classList.add("active");
 }
 
-const setup_section = {
-    header:"Setup Code",
-    subsections:["Dependancies", "Quick Setups", "Examples"]
-}
-
-const demo_section = {
-    header:"Demo Code",
-    subsections:["Todo List", "Ticker"]
-}
-
-let contents = [setup_section, demo_section];
 var current_active_tab = "0-0"
 
 render(contents);
@@ -65,10 +56,24 @@ document.querySelectorAll('span').forEach(span => {
     });
 });
 
-async function render_html(){
-    const data = await compile("dependancies.sfl");
-    generateHTML(data, main_area);
-    console.log(data);
-}
-render_html()
+async function render_html(fname){
+    try{
+        const data = await compile(fname);
+        console.log(data)
+        generateHTML(data, main_area);
+    }
+    catch(e){
+        console.log(e);
+        const data = await compile("ERROR.sfl");
+        generateHTML(data, main_area);
+    }
 
+}
+
+function updateHTML(current_active_tab){
+    let section_number = parseInt(current_active_tab.split("-")[0]);
+    let tab_number = parseInt(current_active_tab.split("-")[1]);
+    render_html(contents[section_number].subsection_file_names[tab_number]);
+}
+
+updateHTML(current_active_tab);

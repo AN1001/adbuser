@@ -1,10 +1,19 @@
 function compile(file_name) {
-    return fetch(file_name)
-        .then((res) => res.text())
-        .then((text) => compile_text(text))
+    return fetch("files/" + file_name)
+        .then((res) => {
+            if (!res.ok) {
+                console.error('Error: ' + res.statusText);
+                return undefined; // Return undefined if fetch fails
+            }
+            return res.text();
+        })
+        .then((text) => {
+            if (text === undefined) return undefined; // If text is undefined, return undefined
+            return compile_text(text);
+        })
         .catch((e) => {
             console.error(e);
-            throw e; // Re-throw the error to propagate it
+            return undefined; // Return undefined on any other error
         });
 }
 

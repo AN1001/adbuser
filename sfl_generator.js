@@ -1,12 +1,13 @@
 function generateHTML(data, append_to_element) {
     const mainBody = append_to_element;
+    clear(mainBody);
     
     // Style definitions
     const style = document.createElement('style');
     style.textContent = `
         .genText { font-size: 16px; margin-bottom: 10px; }
-        .genTitle { font-size: 24px; font-weight: bold; margin-bottom: 15px; }
-        .genCode { font-family: monospace; background-color: #f5f5f5; padding: 10px; border-radius: 5px; margin-bottom: 10px; white-space: pre-wrap; }
+        .genTitle { font-size: 34px; font-weight: bold; margin-bottom: 15px; }
+        .genCode { font-family: monospace; background-color: #1e1e1e; padding: 10px; border-radius: 5px; margin-bottom: 10px; white-space: pre-wrap; }
         .bold { font-weight: bold; }
         .italics { font-style: italic; }
     `;
@@ -44,7 +45,6 @@ function generateHTML(data, append_to_element) {
         }
 
         if (type === "code") {
-            console.log(content)
             const codeDiv = document.createElement('pre');
             codeDiv.className = 'genCode';
             codeDiv.innerHTML = content.join('<br>');  // Replace line breaks with <br> tags
@@ -52,6 +52,12 @@ function generateHTML(data, append_to_element) {
             mainBody.appendChild(codeDiv);
         }
     });
+}
+
+function clear(element) {
+  while (element.firstChild) {
+      element.removeChild(element.firstChild);
+  }
 }
 
 export default generateHTML;

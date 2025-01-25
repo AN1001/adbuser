@@ -14,6 +14,7 @@
   --text: #fff;
   --faint-text: #c5c5c5;
   --sidebar-width: 250px;
+  --main-area-padding: 50px;
 }
 
 html{
@@ -26,7 +27,10 @@ body{
 }
 
 #main-area{
-  width: calc(100vw - 250px);
+  color: rgba(255, 255, 255, 0.914);
+  width: calc(100vw - 250px - 2 * var(--main-area-padding));
+  padding: var(--main-area-padding);
+  padding-top: 40px;
 }
 
 #sidebar-holder{
@@ -110,6 +114,10 @@ body{
   font-size: 1.1em;
 }
 
-.genCode {
-  white-space: pre-wrap;
+.code {
+  font-family: monospace;
+  background: var(--border);
+  padding: 3px 5px 3px 5px;
+  border-radius: 0.3em;
+  margin: 0 4px 0 4px;
 }
