@@ -5,13 +5,8 @@ function generateHTML(data, append_to_element) {
     // Style definitions
     const style = document.createElement('style');
     style.textContent = `
-        .genText { font-size: 16px; margin-bottom: 10px; }
-        .genTitle { font-size: 34px; font-weight: bold; margin-bottom: 15px; }
-        .genCode { font-family: monospace; background-color: #1e1e1e; padding: 10px; border-radius: 5px; margin-bottom: 10px; white-space: pre-wrap; }
         .bold { font-weight: bold; }
         .italics { font-style: italic; }
-        .genLink { color: blue; text-decoration: underline; cursor: pointer; margin-bottom: 10px; }
-        .genPicture { display: block; max-width: 100%; margin-bottom: 10px; }
     `;
     document.head.appendChild(style);
 
@@ -58,7 +53,7 @@ function generateHTML(data, append_to_element) {
             const link = document.createElement('a');
             link.className = 'genLink';
             link.href = content;
-            link.textContent = content;
+            link.textContent = spans;
             link.target = '_blank'; // Opens in a new tab
             mainBody.appendChild(link);
         }
@@ -83,7 +78,7 @@ function generateHTML(data, append_to_element) {
             list.className = 'genList';
             content.items.forEach((item) => {
                 const li = document.createElement("li");
-                li.textContent = item;
+                li.textContent = spans;
                 list.appendChild(li);
             });
             mainBody.appendChild(list);

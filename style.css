@@ -7,6 +7,7 @@
 }
 
 :root{
+  --text-size: 1.2;
   --main-bg: #121212;
   --overlay: #1e1e1e;
   --accent: #3768f8;
@@ -128,14 +129,13 @@ body{
 
 .code {
   font-family: monospace;
-  font-size: 14px;
+  font-size: calc(14px * var(--text-size));
   background: #252525;
   padding: 3px 5px 3px 5px;
   border-radius: 0.3em;
   margin: 0 4px 0 4px;
 }
 
-/* Link Styles */
 .genLink {
   color: var(--accent-low);
   text-decoration: underline;
@@ -143,14 +143,12 @@ body{
   margin-bottom: 10px;
 }
 
-/* List Styles */
 .genList {
   margin: 10px 0;
   padding-left: 20px;
   list-style-type: disc;
 }
 
-/* Table Styles */
 .genTable {
   border-collapse: collapse;
   width: 100%;
@@ -158,20 +156,20 @@ body{
 }
 
 .genTable th, .genTable td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   padding: 8px;
   text-align: left;
 }
 
 .genTable th {
-  background-color: #f2f2f2;
+  background-color: var(--overlay);
   font-weight: bold;
+  font-size: calc(17px * var(--text-size));
 }
 
-/* Blockquote Styles */
 .genBlockquote {
   font-style: italic;
-  font-size: 20px;
+  font-size: calc(20px * var(--text-size));
   margin: 10px 0;
   border-left: 4px solid #ccc;
   padding-left: 10px;
@@ -188,6 +186,26 @@ body{
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.genText {
+  font-size: calc(16px * var(--text-size));
+  margin-bottom: 10px;
+}
+
+.genTitle {
+  font-size: calc(34px * var(--text-size));
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.genCode {
+  font-family: monospace;
+  font-size: calc(17px * var(--text-size));
+  background-color: #1e1e1e;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
 
 @keyframes fadeInOpacity {
 	0% {

@@ -50,6 +50,15 @@ function compile_text(text){
             case "code":
                 compiled_text[index][1]=(element[1]+'').split("\n")
                 break;
+            case "link":
+                let link_data = element[1].split(",")
+                compiled_text[index][1] = link_data[0];
+                compiled_text[index].push(link_data[1]);
+                break;
+            case "table":
+                let arr = element[1].slice(1, -1).split('],[').map(inner => inner.split(',').map(String));
+                compiled_text[index][1] = arr;
+                break;
         }
     });
     return compiled_text;
