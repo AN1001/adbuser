@@ -10,6 +10,7 @@
   --main-bg: #121212;
   --overlay: #1e1e1e;
   --accent: #3768f8;
+  --accent-low: #a4bbfd;
   --border: #424242;
   --text: #fff;
   --faint-text: #c5c5c5;
@@ -95,7 +96,7 @@ body{
 }
 
 .active {
-  color: #a4bbfd !important;
+  color: var(--accent-low) !important;
 }
 
 .sidebar-el-name{
@@ -133,6 +134,60 @@ body{
   border-radius: 0.3em;
   margin: 0 4px 0 4px;
 }
+
+/* Link Styles */
+.genLink {
+  color: var(--accent-low);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* List Styles */
+.genList {
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+/* Table Styles */
+.genTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.genTable th, .genTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.genTable th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Blockquote Styles */
+.genBlockquote {
+  font-style: italic;
+  font-size: 20px;
+  margin: 10px 0;
+  border-left: 4px solid #ccc;
+  padding-left: 10px;
+  color: var(--faint-text);
+}
+
+/* Picture Styles */
+.genPicture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 @keyframes fadeInOpacity {
 	0% {
